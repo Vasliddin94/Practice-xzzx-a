@@ -98,8 +98,9 @@ body{
     transform: rotateY(180deg);
 }
 
-@media  screen and (max-width: 580px) {
+@media  screen and (max-width: 560px) {
     .container{
-        width: 561px;
+        width: 480px;
+        text-align: center
     }
 }
