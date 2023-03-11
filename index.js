@@ -1,6 +1,9 @@
 const containerEl=document.getElementById('container');
+const winnertab=document.getElementById("winnertab")
 const cards_length=16;
 const cards =[];
+let ball=0;
+console.log(ball);
 
 let previousShownCard=undefined;
 
@@ -60,10 +63,25 @@ for(i=0; i<cards_length; i++){
                 setTimeout(() => {
                     temp.classList.add('remove');
                     cardEl.classList.add('remove'); 
-                }, 2000);
+                    ball++;
+                    console.log(ball);
+                    if(ball===8){
+                        winnertab.style.display="block";
+                        containerEl.classList.add("winner")
+                    }
+                }, 2000)
             }
             previousShownCard=undefined;
-        }   
+        }
+        
+        checker=()=>{
+            for (i = 0; i < cards_length; i++) {
+                if (cardEl.contains('remove')) {
+                    alert('Tugadi')
+                }};
+            
+        }
+        
     })
     cards.push(cardEl);
     containerEl.appendChild(cardEl)
