@@ -100,7 +100,7 @@ body{
 
 @media  screen and (max-width: 560px) {
     .container{
-        width: 440px;
+        width: 450px;
         text-align: center
     }
 }
